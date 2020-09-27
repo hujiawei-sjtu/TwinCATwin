@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="MAIN" Id="{ed1486a2-1ab6-43c3-ab7e-772e7fc5bebd}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	BOOL1 AT %MD0 : BOOL := 0;
+	INT1 AT %MD2 : INT := 12;
+	FLOAT1 AT %MD6 : REAL := 1.6;
+	String1 AT %MD8 : STRING := 'BECKHOFF';
+	Array1: ARRAY[0..9] OF INT;
+	PLCVar: PLCStruct := (inVal := 12, floatVal := 1.2);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[;]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
